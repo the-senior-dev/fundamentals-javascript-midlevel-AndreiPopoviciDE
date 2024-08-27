@@ -9,7 +9,11 @@
 // curriedAdd(1)(2); // 3
 
 function curry(fn) {
-    // Your implementation here
+    return function cur1(a) {
+        return function cur2(b) {
+          return fn(a, b);
+        };
+      };
 }
 
 module.exports = curry;
